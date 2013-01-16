@@ -1,13 +1,12 @@
-UPDATE (2012-11-26)
+UPDATE (2013-01-15)
 =======
 
-This is an updated version of the original Adam Lantos redmine_http_auth 
+This is an updated, updated version of the original Adam Lantos redmine_http_auth 
 plugin. 
 
 This update is known to work with Redmine 2.0.x versions.
 
 To the best of my knowledge the original functionality is complete. 
-(with the exception of the menu item - commented in init.rb)
 
 
 HTTP Authentication plugin for Redmine
@@ -31,14 +30,14 @@ Installation
 
 Use the following command from within your Redmine plugin directory:
 
-# git checkout https://github.com/kevinfoote/redmine_http_auth.git 
+# git checkout https://github.com/uberamd/redmine_http_auth.git 
 
 
 Settings
 =======
 
 The behavior of this plugin can be customized through the 'settings' page in the
-plugins menu. Currently there are three options:
+plugins menu. Currently there are six options:
 
 - enable / disable HTTP Authentication (default: enable)
 - set the header / environment value to look for (default: REMOTE_USER)
@@ -46,7 +45,7 @@ plugins menu. Currently there are three options:
   (default: login name)
 - enable / disable automatic registration (default: disable), see below
 - enable / disable the "keep session" behavior (default: disable), see below
-
+- disable newly auto registered accounts, allowing admins to verify accounts before allowing access (work in progress)
 
 Known issues
 =======
@@ -71,6 +70,10 @@ lookup attribute matching with the environment.
 Automatically registered accounts don't have associated passwords, but the
 user can change their password via the common password change form.
 
+Newly registered accounts can be disabled by default which requires an administrator
+to grant access to the user. This is ideal for more closed environments with many
+potential users. It doesn't require manual registration of users by admins, but
+doesn't allow everyone and their mother into the system. Strikes a balance.
 
 Session synchronization
 =======
