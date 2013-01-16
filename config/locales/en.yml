@@ -13,3 +13,4 @@ en:
   error_remote_user_unset: Username is not provided
   error_unknown_user: User was not found in the database
   label_keep_sessions: Keep redmine sessions open after HTTP authentication lost (dangerous!)
+  label_disable_auto_reg_account: Disable auto registered accounts until verified

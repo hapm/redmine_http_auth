@@ -26,3 +26,8 @@
   <%=content_tag(:label, l(:label_keep_sessions))%>
   <%=check_box_tag 'settings[keep_sessions]', true, @settings['keep_sessions'] == "true" %>
 </p>
+
+<p>
+  <%=content_tag(:label, l(:label_disable_auto_reg_account))%>
+  <%=check_box_tag 'settings[disable_new_accounts]', true, @settings['disable_new_accounts'] == "true" %>
+</p>
